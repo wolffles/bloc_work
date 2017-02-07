@@ -1,0 +1,27 @@
+table, td, th, tr{
+border: 1px solid black;
+padding: 0 5px 0 5px;
+}
+table {
+    counter-reset: rowNumber;
+    margin: auto;
+}
+
+table tr {
+    counter-increment: rowNumber;
+}
+
+table tr td:first-child::before {
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+}
+
+tr .descriptions{
+  max-width: 600px;
+}
+tr .descriptions {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: elipsis;
+}
