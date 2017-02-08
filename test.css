@@ -3,15 +3,13 @@ border: 1px solid black;
 padding: 0 5px 0 5px;
 }
 table {
+    width: auto;
     counter-reset: rowNumber;
     margin: auto;
 }
 
-table tr {
-    counter-increment: rowNumber;
-}
-
 table tr td:first-child::before {
+    counter-increment: rowNumber;
     content: counter(rowNumber);
     min-width: 1em;
     margin-right: 0.5em;
